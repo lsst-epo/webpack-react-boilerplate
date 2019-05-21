@@ -1,0 +1,19 @@
+// Components Manifest
+// -------------------
+
+@import 'base';
+@import 'hello-world/index';
+
+// Content Elements
+//
+// Weight: 4
+//
+// Styleguide Content-Elements
+@import 'content/index';
+
+// Site Components
+//
+// Weight: 3
+//
+// Styleguide Site-Components
+@import 'site/index';

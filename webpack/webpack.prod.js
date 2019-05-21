@@ -59,7 +59,7 @@ module.exports = {
               sourceMap: false,
               modules: true,
               camelCase: true,
-              localIdentName: '[local]___[hash:base64:5]',
+              localIdentName: '[local]',
             },
           },
           'sass-loader',
@@ -70,8 +70,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${commonPaths.cssFolder}/[name].css`,
-      chunkFilename: `${commonPaths.cssFolder}/[name].css`,
+      filename: `${commonPaths.cssFolder}/[name].[hash].css`,
+      chunkFilename: `${commonPaths.cssFolder}/[name].[chunkhash].css`,
     }),
   ],
   devtool: 'source-map',
