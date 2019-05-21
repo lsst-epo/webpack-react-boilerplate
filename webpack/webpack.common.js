@@ -58,6 +58,9 @@ module.exports = {
     open: true,
   },
   resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
     modules: ['src', 'node_modules'],
     extensions: ['*', '.js', '.jsx', '.css', '.scss'],
   },

@@ -9,7 +9,7 @@ class App extends Component {
   }
 
   render() {
-    return <HelloWorld title="Hello from LSST" />;
+    return <HelloWorld title="Hello from LSST Boilerplate" />;
   }
 }
 

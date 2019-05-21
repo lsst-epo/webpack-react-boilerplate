@@ -2,3 +2,4 @@ webpack/*
 __tests__/*
 __mocks__/*
 build
+readme.md
