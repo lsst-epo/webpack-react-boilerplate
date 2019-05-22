@@ -62,6 +62,7 @@ module.exports = {
               localIdentName: '[local]',
             },
           },
+          'postcss-loader',
           'sass-loader',
         ],
       },
