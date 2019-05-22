@@ -17,9 +17,9 @@
 // Respond to pixel density
 // --------------------------
 @mixin respondMinDensity($density: 1.5) {
-  @media only screen and (-Webkit-min-device-pixel-ratio: $density),
-  only screen and (min--moz-device-pixel-ratio: $density),
-  only screen and (min-device-pixel-ratio: $density) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $density),
+    only screen and (min--moz-device-pixel-ratio: $density),
+    only screen and (min-device-pixel-ratio: $density) {
     @content;
   }
 }
@@ -50,7 +50,7 @@
 
 // Utilities
 @function strip-unit($number) {
-  @if type-of($number) == "number" and not unitless($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 

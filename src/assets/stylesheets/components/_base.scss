@@ -3,8 +3,8 @@
 
 // Applies a natural box layout model to all the things
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 

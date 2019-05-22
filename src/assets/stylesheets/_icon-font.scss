@@ -33,12 +33,12 @@
 @mixin protoIcon {
   @include fontIcon;
   display: inline-block;
-  vertical-align: top;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
+  text-transform: none;
+  vertical-align: top;
   speak: none;
 }
 
