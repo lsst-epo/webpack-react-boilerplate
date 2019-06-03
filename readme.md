@@ -25,17 +25,19 @@
 ```
 build/
 src/
-|- index.jsx _______________________________ # Application entry
-|- App.jsx _________________________________ # Application init
-|  |- Components/
+|- index.jsx _______________________________ # application entry
+|- App.jsx _________________________________ # application init
+|  |- components/
 |    |- hello-world/
-|       |- index.jsx _______________________ # Sample component
-
-webpack
-|- paths.js ________________________________ # webpack paths needed
-|- webpack.common.js _______________________ # common webpack config
-|- webpack.dev.js __________________________ # development config
-|- webpack.prod.js _________________________ # production config
+|       |- index.jsx _______________________ # sample component
+|  |- assets/
+|    |- images/
+|       |- lsst_logo_small.png _____________ # sample Logo
+|    |- stylesheets/
+|       |- STACSS/ _____________ # global Structure, Typography, and Appearance styles
+|       |- components/
+|          |- hello-world/
+|             |- index.scss _____________ # sample component styles
 ```
 
 ### Installation
@@ -54,14 +56,39 @@ webpack
 
 ### Configuration
 
-- Webpack Config paths based on file structure: `webpack/paths.js`
-- Common Webpack Config shared by development and production environments: `webpack/webpack.common.js`
-- Webpack Config for development environment: `webpack/webpack.dev.js`
-- Webpack Config for production environment:`webpack/webpack.prod.js`
-- Webpack Config merging common and environment specific configs: `/webpack.config.js`
-- Enzyme config: `/setupTest.js`
-- Prettier config: `/.prettierc`.
-- Browsers list config: `/.browserslistrc`.
+```
+Webpack
+|- webpack.config.js _______________________ # merging common and environment specific configs
+|- paths.js ________________________________ # Webpack paths needed
+|- webpack.common.js _______________________ # common Webpack config
+|- webpack.dev.js __________________________ # development config
+|- webpack.prod.js _________________________ # production config
+
+BrowserList
+|- .browserlistrc __________________________ # BrowserList config
+
+Babel
+|- babel.config.js _________________________ # Babel config
+
+PostCSS
+|- postcss.config.js _______________________ # PostCSS config
+
+linting
+|- .eslintrc _______________________________ # ESlint rules to apply
+|- .eslintignore ___________________________ # what not to ESlint
+|- .prettierrc _____________________________ # Prettier config
+|- .stylelintrc ____________________________ # Stylelint config
+
+testing
+|- setupTests.js _______________________________ # Enzyme config
+
+IDE
+|- .editorconfig ___________________________ # coding styles definitions
+
+git
+|- .gitignore ______________________________ # what not to track
+|- .PULL_REQUEST_TEMPLATE.md _______________ # if you want to provide a PR template
+```
 
 #### Technologies used
 
@@ -72,8 +99,11 @@ webpack
 - [Jest](https://github.com/facebook/jest) [ Unit test]
 - [Enzyme](http://airbnb.io/enzyme/) for UI testing.
 - [Eslint](https://github.com/eslint/eslint/) with airbnb config
+- [Stylelint](https://stylelint.io/) for linting SCSS/CSS
 - [Prettier](https://github.com/prettier/prettier) [ Code formatter ]
-- [Style](https://github.com/webpack-contrib/style-loader) & [CSS Loader](https://github.com/webpack-contrib/css-loader) & [SASS-loader](https://github.com/webpack-contrib/sass-loader)
+- [EditorConfig](https://editorconfig.org/) [ Code Style definitions ]
+- [STACSS](https://github.com/castiron/STACSS) [ SCSS architecture ]
+- [Style](https://github.com/webpack-contrib/style-loader) & [CSS Loader](https://github.com/webpack-contrib/css-loader) & [SASS-loader](https://github.com/webpack-contrib/sass-loader) & [PostCSS](https://github.com/postcss/postcss) with [Autoprefixer](https://github.com/postcss/autoprefixer)
 - [Browsers list](https://github.com/browserslist/browserslist) [ Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env ]
 - [React hot loader](https://github.com/gaearon/react-hot-loader)
 - [Webpack dev server](https://github.com/webpack/webpack-dev-server)
