@@ -1,9 +1,9 @@
 ## Webpack 4, Babel 7, React boilerplate
 
-<p align="center">
-    <img alt="dependencies" title="dependencies" src="https://img.shields.io/david/blnkt/webpack-react-boilerplate.svg" >
-   <img alt="dependencies" title="dependencies" src="https://img.shields.io/github/last-commit/blnkt/webpack-react-boilerplate.svg" >
-</p>
+<!-- <p align="center">
+    <img alt="dependencies" title="dependencies" src="https://img.shields.io/blnkt/webpack-react-boilerplate.svg" >
+   <img alt="activity" title="activity" src="https://img.shields.io/github/last-update/blnkt/webpack-react-boilerplate.svg" >
+</p> -->
 
 > Minimal webpack and react boilerplate using latest version of react and babel as well as jest and enzyme for testing.
 > [For more details about technologies used.](#technologies-used)
